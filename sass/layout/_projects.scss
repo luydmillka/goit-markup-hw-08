@@ -1,0 +1,35 @@
+@media screen and (max-width: 1199px) {
+  .projects {
+    display: none;
+  }
+}
+
+.projects__list {
+  display: flex;
+}
+.projects__item {
+  flex-basis: calc((100% - 60px) / 3);
+}
+.projects__item:not(:last-child) {
+  margin-right: 30px;
+}
+.project__thumb {
+  position: relative;
+}
+.project__name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: 70px;
+  padding: 10px;
+  font-weight: 700;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--white);
+  background: rgba(47, 48, 58, 0.8);
+}

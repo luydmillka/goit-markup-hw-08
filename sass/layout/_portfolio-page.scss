@@ -1,0 +1,114 @@
+// filter-list
+
+.filter {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+
+  &__button {
+    padding: 6px 22px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    font-family: inherit;
+    text-align: center;
+    color: var(--headers);
+    background-color: var(--bcgbutton);
+    border-color: transparent;
+    box-shadow: none;
+    transition: color 250ms var(--transit-function), background-color 250ms var(--transit-function),
+      box-shadow 250ms var(--transit-function);
+    cursor: pointer;
+  }
+  &__item:not(:last-child) {
+    margin-right: 8px;
+  }
+  &__button:hover,
+  &__button:focus {
+    color: var(--white);
+    background-color: var(--hover);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+// portfolio-list
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  &__item {
+    flex-basis: calc((100% - 90px) / 3);
+  }
+  &__link {
+    display: block;
+    box-shadow: none;
+    transition: box-shadow 250ms var(--transit-function);
+    &:hover,
+    &:focus {
+      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+  }
+
+  &__thumb {
+    position: relative;
+    overflow: hidden;
+  }
+  &__about {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 63px 24px;
+    font-size: 18px;
+    line-height: 1.55;
+    color: var(--white);
+    background-color: rgba(33, 150, 243, 0.9);
+    transform: translateY(101%);
+    transition: transform 250ms var(--transit-function);
+  }
+  &__link:hover .portfolio-list__about,
+  &__link:focus .portfolio-list__about {
+    transform: translateY(0);
+  }
+  &__box {
+    padding: 20px 24px;
+    border: 1px solid #eeeeee;
+    border-top: none;
+  }
+  &__title {
+    margin-bottom: 4px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: var(--headers);
+  }
+  &__desrription {
+    font-size: 16px;
+    line-height: 1.88;
+    color: var(--text);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .filter {
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+  // .portfolio-list__link {
+  //   display: block;
+  //   height: 100%;
+  // }
+  // .portfolio-list__item {
+  //   align-self: stretch;
+  // }
+}

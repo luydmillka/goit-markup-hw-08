@@ -46,7 +46,9 @@
     flex-basis: calc((100% - 90px) / 3);
   }
   &__link {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     box-shadow: none;
     transition: box-shadow 250ms var(--transit-function);
     &:hover,
@@ -59,6 +61,9 @@
   &__thumb {
     position: relative;
     overflow: hidden;
+  }
+  &__box {
+    flex-grow: 1;
   }
   &__about {
     position: absolute;
@@ -107,8 +112,5 @@
   // .portfolio-list__link {
   //   display: block;
   //   height: 100%;
-  // }
-  // .portfolio-list__item {
-  //   align-self: stretch;
   // }
 }

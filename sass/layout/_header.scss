@@ -17,9 +17,11 @@
 }
 .mobile-container {
   padding: 48px 40px;
+  height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   @media screen and (min-width: 480px) {
     width: 480px;
     margin: 0 auto;
@@ -50,12 +52,14 @@
   overflow: auto;
   background-color: #fff;
   display: none;
+  overflow: auto;
 }
 .mobile-menu.is-open {
   display: block;
 }
 .mobile-nav {
-  margin-bottom: 309px;
+  // margin-bottom: 309px;
+  margin-bottom: auto;
   &__item:not(:last-child) {
     margin-bottom: 32px;
   }
@@ -102,6 +106,14 @@
     letter-spacing: 0.02em;
     color: var(--hover);
   }
+  @media screen and (max-width: 479px) {
+    & {
+      flex-wrap: wrap;
+    }
+    &__item {
+      margin-bottom: 20px;
+    }
+  }
 }
 .mobile-menu__icon-close {
   position: absolute;
@@ -111,6 +123,9 @@
   border: none;
   @media screen and (min-width: 768px) {
     display: none;
+  }
+  &:hover .mobile-menu--close {
+    fill: var(--hover);
   }
 }
 

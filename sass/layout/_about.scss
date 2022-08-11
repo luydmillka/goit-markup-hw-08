@@ -33,6 +33,9 @@
   .about__item {
     flex-basis: calc((100% - 30px) / 2);
   }
+  .about__label {
+    text-align: left;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -51,7 +54,7 @@
   .about__item {
     flex-basis: calc((100% - 90px) / 4);
   }
-  .about__label {
-    text-align: left;
+  .about__item:not(:last-child) {
+    margin-bottom: 0px;
   }
 }

@@ -1131,6 +1131,10 @@ img {
   gap: 30px;
 }
 
+.portfolio-list__item {
+  width: 100%;
+}
+
 .portfolio-list__link {
   display: -webkit-box;
   display: -ms-flexbox;

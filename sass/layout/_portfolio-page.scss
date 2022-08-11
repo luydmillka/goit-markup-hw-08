@@ -43,6 +43,10 @@
   // justify-content: space-between;
   gap: 30px;
 
+  &__item {
+    width: 100%;
+  }
+
   &__link {
     display: flex;
     flex-direction: column;
